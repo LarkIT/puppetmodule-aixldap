@@ -1,7 +1,7 @@
 #!/bin/sh
 # This will get a list of local users that are not a common system user.
 # These local users will have some attributes set to ensure they authenticate locally.
-PATH='/usr/bin:/usr/sbin'
+PATH='/bin:/sbin:/usr/bin:/usr/sbin'
 export PATH
 if [ `uname` == 'AIX' ]; then
     sysusers="root bin daemon sys adm uucp nobody lpd lp invscout snapp nuucp ipsec pconsole esaadmin sshd srvproxy virtuser"
