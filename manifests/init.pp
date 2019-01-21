@@ -106,15 +106,9 @@ class aixldap (
   # NOTE: root and virtuser will be handled elsewhere
   $local_users = split($facts['aix_local_users'], ' ')
   $local_users.each |$user| {
-    if !defined(User[$user]) {
-      user { $user:
-        ensure         => 'present',
-        ia_load_module => 'files',
-        attributes     => [
-          'SYSTEM=compat',
-          'registry=files',
-        ],
-      }
+    # NOTE: Usually exec's are bad, but we don't want to cause duplicate user resources
+    exec { "Fix Local User: ${user}":
+      command => "/usr/bin/chuser -R files SYSTEM=compat registry=files ${user}",
     }
   }
 
