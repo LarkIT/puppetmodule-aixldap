@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release v0.2.2
+
+* Updated path in shell fact to work in other OS's (EL6)
+* Updated method for fixing local users default attributes to prevent duplicate user resources.
+
 ## Release v0.2.1
 
 * Add /bin to path for aix_local_nonsystems_users.sh fact for Ubunutu
