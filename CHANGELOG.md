@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release v0.2.3
+
+* Update version_requirement for stdlib to 7.0.0
+
 ## Release v0.2.2
 
 * Updated path in shell fact to work in other OS's (EL6)
